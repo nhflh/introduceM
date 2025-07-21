@@ -1,0 +1,47 @@
+.table-container {
+    overflow-x: auto; 
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #dc3545; /* ヘッダーの背景色 */
+    color: white;
+    font-weight: bold;
+    white-space: nowrap; /* テキストが改行されないように */
+}
+
+table tr:nth-child(even) {
+    background-color: #fcebeb; /* 偶数行の背景色 */
+}
+
+table tr:hover {
+    background-color: #f7e0e0; /* ホバー時の背景色 */
+}
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
