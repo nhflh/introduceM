@@ -68,145 +68,70 @@
                 </div>
                 <div class="card hover-effect">
                     <div class="card-icon"><i class="fas fa-rocket"></i></div>
-
                     <h3>ロケット・宇宙工学の入口</h3>
-
                     <p>宇宙を目指すロケットの推進原理や構造についても触れ、広がる機械工学の可能性を体感します。</p>
-
                 </div>
-
             </div>
-
         </section>
-
-     
-
   <section id="curriculum" class="fade-in">
-
             <h2><i class="fas fa-calendar-alt"></i> カリキュラムの概要</h2>
-
             <p>エネルギー機械コースで学ぶ主な科目と、その学習内容の例です。皆さんの興味を広げる多様な科目が用意されています。</p>
-
             <div class="table-container">
-
                 <table>
-
                     <thead>
-
-                        <tr>
-
+                      <tr>
                             <th>科目名</th>
-
                             <th>主な学習内容</th>
-
                             <th>関連する分野</th>
-
                         </tr>
-
                     </thead>
-
                     <tbody>
-
                         <tr>
-
                             <td>機械設計</td>
-
                             <td>CADを用いた機械部品の設計、製図法、材料の選定</td>
-
                             <td>製造業、自動車、航空宇宙</td>
-
                         </tr>
-
                         <tr>
-
                             <td>エネルギー変換</td>
-
                             <td>熱機関、発電システム、再生可能エネルギーの原理</td>
-
                             <td>電力、環境、新エネルギー</td>
-
                         </tr>
-
                         <tr>
-
                             <td>流体工学</td>
-
                             <td>ポンプ、タービン、配管システムにおける流体の挙動</td>
-
                             <td>プラント、水処理、空調</td>
-
                         </tr>
-
                         <tr>
-
                             <td>工作実習</td>
-
                             <td>旋盤、フライス盤、溶接などの基礎的な機械加工技術</td>
-
                             <td>ものづくり、生産技術</td>
-
                         </tr>
-
                         <tr>
-
                             <td>ロボット工学入門</td>
-
                             <td>ロボットの仕組み、プログラミング、自動化技術</td>
-
                             <td>FA、AI、サービスロボット</td>
-
                         </tr>
-
                         <tr>
-
                             <td>工業技術基礎</td>
-
                             <td>工業高校で学ぶ基礎知識、安全作業、測定技術</td>
-
                             <td>全ての工業分野</td>
-
                         </tr>
-
                     </tbody>
-
                 </table>
-
             </div>
-
   </section>
-
-        
-
         <section id="facilities" class="fade-in">
-
             <h2><i class="fas fa-wrench"></i> 充実した施設と設備</h2>
-
             <div class="content-wrapper reverse">
-
                 <div class="text-content">
-
                     <p>エネルギー機械コースでは、最新の設備が整った実習室で、実践的な学びを深めることができます。</p>
-
                     <ul>
-
                         <li><strong>実習工場:</strong> 旋盤、フライス盤、溶接機など、様々な工作機械を安全に操作し、部品加工の技術を習得します。</li>
-
                         <li><strong>熱エネルギー実験室、流体工学実験室など:</strong> 太陽光発電、風力発電の小型モデルや、エンジンの性能測定装置などを使い、エネルギー変換の原理を実験を通じて理解します。</li>
-
                         <li><strong>CAD、CAE室:</strong> パソコンと最新ソフトウェアを用いて、機械部品の設計や加工プログラムの作成を行います。</li>
-
-                    </ul>
-
-
-
-                </section>
-
-           
-
+                    </ul>
+                </section>
             <img src="3M-33_2A.jpg" alt="コースのイメージ写真" style="max-width:60%; height:auto;">
-
-            
-
         </section>
         <section id="faq" class="fade-in">
             <h2><i class="fas fa-question-circle"></i> よくある質問</h2>
@@ -267,102 +192,49 @@
     </footer>
  <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // アコーディオン機能
-
+            // 
             const accordionHeaders = document.querySelectorAll('.accordion-header');
-
             accordionHeaders.forEach(header => {
-
                 header.addEventListener('click', function() {
-
                     const content = this.nextElementSibling;
-
                     const icon = this.querySelector('.accordion-icon');
-
-
-
                     if (content.style.maxHeight) {
-
                         content.style.maxHeight = null;
-
                         icon.classList.remove('fa-chevron-up');
-
                         icon.classList.add('fa-chevron-down');
-
                     } else {
-
                         document.querySelectorAll('.accordion-content').forEach(item => {
-
                             if (item !== content && item.style.maxHeight) {
-
                                 item.style.maxHeight = null;
-
                                 item.previousElementSibling.querySelector('.accordion-icon').classList.remove('fa-chevron-up');
-
                                 item.previousElementSibling.querySelector('.accordion-icon').classList.add('fa-chevron-down');
-
                             }
-
                         });
-
                         content.style.maxHeight = content.scrollHeight + "px";
-
                         icon.classList.remove('fa-chevron-down');
-
                         icon.classList.add('fa-chevron-up');
-
                     }
-
                 });
-
             });
-
-
-
-            // フェードインアニメーション
-
+            // 
             const fadeInSections = document.querySelectorAll('.fade-in');
-
             const observerOptions = {
-
                 root: null,
-
                 rootMargin: '0px',
-
                 threshold: 0.1 // 10%が見えたら発動
-
             };
-
-
-
             const observer = new IntersectionObserver((entries, observer) => {
-
                 entries.forEach(entry => {
-
                     if (entry.isIntersecting) {
-
                         entry.target.classList.add('show');
-
                         observer.unobserve(entry.target); // 一度表示されたら監視を停止
-
                     }
-
                 });
-
             }, observerOptions);
-
-
-
             fadeInSections.forEach(section => {
-
                 observer.observe(section);
-
             });
-
         });
-
     </script>
-
 </body>
-
 </html>
