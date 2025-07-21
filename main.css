@@ -330,11 +330,11 @@ footer {
 /* Responsive Design */
 @media (max-width: 992px) {
     .content-wrapper {
-        flex-direction: column; /* 縦並びにする */
+        flex-direction: column; 
         gap: 20px;
     }
     .content-wrapper.reverse {
-        flex-direction: column; /* 縦並びにする */
+        flex-direction: column; 
     }
     .image-content {
         flex: 0 0 auto; /* 幅の固定を解除 */
@@ -343,6 +343,13 @@ footer {
     .cards-container {
         grid-template-columns: repeat(2, 1fr); 
     }
+    nav ul li {
+        margin: 0 10px; 
+    }
+    nav ul li a {
+        padding: 8px 12px; 
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -386,6 +393,21 @@ footer {
     .accordion-content {
         padding: 0 20px;
     }
+     nav ul {
+        flex-direction: column; /* 768px以下では、ナビゲーションが縦並びになるので、これは維持 */
+        align-items: center;
+    }
+    nav ul li {
+        margin: 5px 0; /* 縦並びになった時のマージンを調整 */
+    }
+    nav ul li a {
+        padding: 8px 15px; /* 縦並びでもパディングは維持 */
+        width: 100%; /* 縦並びになった時に幅を広げる */
+        box-sizing: border-box; /* パディングを含めて幅を計算 */
+    }
+    nav {
+        padding: 0.5rem 0; /* ナビゲーションバー自体の縦パディングを減らす */
+    }
 }
 
 @media (max-width: 480px) {
@@ -406,6 +428,16 @@ footer {
     }
     section {
         padding: 15px;
+    }
+    nav ul li {
+        margin: 3px 0; /* さらに狭い画面でのマージン */
+    }
+    nav ul li a {
+        padding: 6px 10px; /* さらに狭い画面でのパディング */
+        font-size: 0.9em; /* フォントサイズも少し小さく */
+    }
+    nav {
+        padding: 0.3rem 0; /* さらにナビゲーションバー自体の縦パディングを減らす */
     }
 }
 
