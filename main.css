@@ -411,3 +411,37 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show { 
+    opacity: 1;
+    transform: translateY(0);
+}
+.accordion-header {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.accordion-content {
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 15px; 
+    background-color: #fff;
+}
+
+.accordion-content p, .accordion-content ul {
+    padding-top: 10px; 
+    padding-bottom: 10px;
+}
