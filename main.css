@@ -53,7 +53,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 nav ul li {
@@ -147,7 +147,7 @@ h2 i {
 
 .cards-container {
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr));
     gap: 25px; 
     margin-top: 20px;
 }
@@ -339,6 +339,9 @@ footer {
     .image-content {
         flex: 0 0 auto; /* 幅の固定を解除 */
         width: 100%; /* 全幅に */
+    }
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
